@@ -19,13 +19,18 @@
 	{
 		"anaconda_linting": true,
 		"anaconda_linting_behaviour": "always",
+		"annotations":
+		[
+			"TODO",
+			"README",
+			"FIXME"
+		],
 		"pep257": false,
 		"python_interpreter": "//anaconda/bin/python",
+		"sublimelinter_gutter_marks": true,
+		"sublimelinter_notes": true,
 		"test_command": "python -m unittest discover",
 		"use_pylint": true,
-		"validate_imports": true,
-		"annotations": [ "TODO", "README", "FIXME" ],
-		"sublimelinter_gutter_marks": true,
-		"sublimelinter_notes": true
+		"validate_imports": true
 	}
 }
