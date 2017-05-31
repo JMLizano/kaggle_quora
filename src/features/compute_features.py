@@ -13,12 +13,11 @@ Number of common words in question1 and question2
 
 def available_features_set():  
     features_set = {
-        'f1':{'question_length':['len_q1','len_q1','diff_len'], 
-              'question_length_nospaces': ['len_q1_nospaces','len_q2_nospaces','diff_len_nospaces'],
-              'question_words':['words_q1','words_q2','common_words']},
-        'f2':{'fuzzywuzzy':['fuzz_qratio','fuzz_WRatio','fuzz_partial_ratio','fuzz_partial_token_set_ratio',
-                            'fuzz_partial_token_sort_ratio','fuzz_token_set_ratio','fuzz_token_sort_ratio']
-             }
+        'f1':['len_q1','len_q1','diff_len', 
+              'len_q1_nospaces','len_q2_nospaces','diff_len_nospaces',
+              'words_q1','words_q2','common_words'],
+        'f2':['fuzz_qratio','fuzz_WRatio','fuzz_partial_ratio','fuzz_partial_token_set_ratio',
+              'fuzz_partial_token_sort_ratio','fuzz_token_set_ratio','fuzz_token_sort_ratio']
     }
     return features_set
 

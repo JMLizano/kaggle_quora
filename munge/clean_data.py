@@ -7,6 +7,12 @@ def do_clean(df, filters):
         df = filter(df)
     return df
 
+def save_to_store():
+    with pd.HDFStore('duplicate_question_store.h5') as store:
+...     tr = pd.read_csv('cleaned_train.csv')
+...     t = pd.read_csv('cleaned_test.csv')
+...     store.append('datasets/cleaned_train/data',tr)
+...     store.append('datasets/cleaned_test/data',t)
 
 if __name__ == '__main__':
     # Configuration
