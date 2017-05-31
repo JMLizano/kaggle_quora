@@ -90,3 +90,7 @@ ENV/
 
 # Sublime workspace
 *.sublime-workspace
+
+# Project specific ignores. Dirs with the data files 
+cache/
+input/
