@@ -53,7 +53,7 @@ def save_to_hstore(df, store, rootpath, features):
     for feature in features:
         dist[rootpath + feature] = available_features[feature]
     with pd.HDFStore(store) as store:
-        store.append_to_multiple(dist,df,selector=rootpath + 'data', complib='blosc', complevel=9,index=False)
+        store.append_to_multiple(dist,df,selector=rootpath + 'data', complib='blosc', complevel=4,index=False)
 
 
 if __name__ == '__main__':
